@@ -1,0 +1,60 @@
+# Byte-compiled / optimized files
+*__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE/Editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency directories
+env/
+venv/
+*.venv/
+*.virtualenv/
+dist/
+build/
+lib/
+lib64/
+bin/
+include/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.mypy_cache/
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+*.egg-info
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Site packages
+site-packages/
+pyvenv.cfg
+
+# Local configuration files
+local_settings.py
+
+# Miscellaneous
+*.swp
+*.bak
+*.tmp
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# virtualenv
+.pyvenv/

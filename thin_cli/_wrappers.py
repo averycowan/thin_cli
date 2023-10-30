@@ -1,12 +1,9 @@
 import abc
 import argparse
-from typing_extensions import TypeAlias
-import uuid
 
 from . import protocols
 
-
-SubParsers: TypeAlias = argparse._SubParsersAction
+SubParsers = argparse._SubParsersAction
 
 
 class WrapperBase(abc.ABC):

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import thin_cli
 
 from example import file_system, system_time

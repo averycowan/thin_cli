@@ -3,12 +3,10 @@
 
 import argparse
 from typing import Callable, runtime_checkable, Protocol, Type, Union
-from typing_extensions import TypeAlias
 
-
-SingleCommand: TypeAlias = Type["SingleCommandProtocol"]
-GroupCommand: TypeAlias = Type["GroupCommandProtocol"]
-Command: TypeAlias = Union[SingleCommand, GroupCommand]
+SingleCommand = Type["SingleCommandProtocol"]
+GroupCommand = Type["GroupCommandProtocol"]
+Command = Union[SingleCommand, GroupCommand]
 """A Command is a class object that fulfills one of the Command protocols.
 
 The name of the Command from the command line will be the name of the class in
@@ -27,8 +25,7 @@ To add a new Command, create a class, implement these two static methods, and
 add the class to the list of commands when calling `thin_cli.main(...)`.
 """
 
-
-PrintFn: TypeAlias = Callable[..., None]
+PrintFn = Callable[..., None]
 """The type signature of the `print` function."""
 
 
@@ -56,5 +53,3 @@ class GroupCommandProtocol(Protocol):
     @staticmethod
     def __cli_add_arguments__(parser: argparse.ArgumentParser) -> None:
         """Adds the shared CLI arguments in common for this command group to an argparse parser."""
-
-

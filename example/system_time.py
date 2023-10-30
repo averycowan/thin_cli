@@ -1,8 +1,8 @@
 import argparse
 import datetime
-from typing import Callable
 
 import thin_cli
+
 
 class Time:
   """List directory contents"""
@@ -12,7 +12,7 @@ class Time:
     parser.add_argument("--utc", "-u", action="store_true", help="Use UTC as the timezone")
 
   @staticmethod
-  def __cli_run__(args: argparse.Namespace, print_fn: Callable[[str], None]) -> None:
+  def __cli_run__(args: argparse.Namespace, print_fn: thin_cli.PrintFn) -> None:
     if args.utc:
       current_time = datetime.datetime.utcnow()
     else:

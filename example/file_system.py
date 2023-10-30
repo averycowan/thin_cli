@@ -1,6 +1,5 @@
 import argparse
 import os
-from typing import Callable
 
 import thin_cli
 
@@ -12,7 +11,7 @@ class LS:
     parser.add_argument("--recursive", "-r", action="store_true")
 
   @staticmethod
-  def __cli_run__(args: argparse.Namespace, print_fn: Callable[[str], None]) -> None:
+  def __cli_run__(args: argparse.Namespace, print_fn: thin_cli.PrintFn) -> None:
     if args.recursive:
       LS._list_recursive(args.path, print_fn)
     else:
@@ -35,7 +34,7 @@ class Cat:
     parser.add_argument('files', metavar='file', type=str, nargs='+', help='The files to concatenate and display')
 
   @staticmethod
-  def __cli_run__(args: argparse.Namespace, print_fn: Callable[[str], None]) -> None:
+  def __cli_run__(args: argparse.Namespace, print_fn: thin_cli.PrintFn) -> None:
     for file in args.files:
       with open(file, 'r') as f:
         contents = f.read()

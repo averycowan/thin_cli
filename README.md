@@ -1,8 +1,6 @@
 # Thin CLI
 A command line interface framework.
 
-# Installation
-
 ```bash
 pip install thin-cli
 ```
